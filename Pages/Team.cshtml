@@ -1,0 +1,28 @@
+﻿@page
+@model TeamModel
+@{
+}
+
+<main style="height:100%; background-image: url('../assets/images/circuits.png');position:absolute; left:0; right:0;">
+    <div style="padding:35px; padding-top:60px; position:relative; animation:animatetop 1s;">
+        <h1 class="logo-primary" style="text-align: center; color: #000000">AI AID</h1>
+        <div class="logo-primary" style=" text-align: center; color: #000000">Live. Life. Simpler.</div>
+    </div>
+    <div style="display:flex; justify-content:center">
+        <img src="~/assets/images/employees-no-pics.png" width="60%">
+    </div>
+    <div style="position:absolute; z-index:2; top:100px; left:130px; align-content:center; display:flex; flex-direction:column; justify-content:center;">
+        <div class="logo-primary" style="text-align:center;">Make sure to follow our Instagram!</div>
+        <a class="btn btn-warning logo-primary" role="button" href="https://www.instagram.com/aiaid.ve/">
+            Follow Us
+        </a>
+    </div>
+    <footer class="border-top footer text-muted" style="width:100%; z-index:3!important;background-color:#000000; position:absolute;">
+        <div class="container">
+            &copy; 2023 - AI_Aid_VE - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            Disclaimer: This Virtual Enterprise Online Store is for educational purposes only (2023-2024 - AIAID)
+        </div>
+    </footer>
+    <img src="~/assets/icons/aiden.png" alt="Following Image" id="following-image" style="z-index:1; position:absolute;" state="hover">
+    <script src="~/js/aiden.js"></script>
+</main>

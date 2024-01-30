@@ -1,0 +1,100 @@
+﻿@page
+@model AI_Aid_VE.Pages.ChipsModel
+@{
+    ViewData["Title"] = "Shop Chips";
+}
+<script>
+    class ChipBuyButton extends HTMLElement {
+        connectedCallback() {
+            this.innerHTML =
+                `
+                <div style="padding:20px">
+                    <div style="display:flex; justify-content:center; align-items:center">
+                        <img src="${this.getAttribute("image")}" style="width: 40%"/>
+                    </div>
+                    <div style="display:flex; justify-content:center; align-items:center; text-align:center">
+                        <p6 class="logo-primary">${this.getAttribute("desc")}</p6>
+                    </div>
+                    <div style="display:flex; justify-content:center; align-items:center">
+                        <p1 class="logo-primary" style="font-size: 24px; padding-right:30px;">$400.00</p1>
+                        <a class="btn btn-warning logo-primary" role="button" href="${this.getAttribute("buy-link")}">
+                            Add to Cart
+                        </a>
+                    </div>
+                </div>
+                `
+                ;
+        }
+    }
+    customElements.define("chip-buy-button", ChipBuyButton);
+</script>
+<main style="height:100%; background-image: url('../assets/images/circuits.png');position:absolute; left:0; right:0;">
+    <div style="position:absolute; z-index:2; top:100px; left:130px; align-content:center; display:flex; flex-direction:column; justify-content:center;">
+        <div class="logo-primary" style="text-align:center;">Make sure to purchase an A.I.D.E.N. Bot too!</div>
+        <a class="btn btn-warning logo-primary" role="button" asp-page="Customize">
+            Purchase AIDEN
+        </a>
+    </div>
+    <div style="padding:35px; padding-top:60px;  position:relative; animation:animatetop 1s;">
+        <h1 class="logo-primary" style="text-align: center;">AI AID</h1>
+        <div class="logo-primary" style=" text-align: center;">Live. Life. Simpler.</div>
+    </div>
+    <div style="padding-top:20px;">
+        <div class="logo-primary" style="text-align:center; font-size:24px; padding-bottom:20px">Service</div>
+        <div class="container-bg" style="display:flex; width:100%; background-color: #ffffff; flex-direction:column; padding:10px">
+            <div style="display:flex;justify-content:space-evenly; position:relative; animation:animateright 1s;">
+                <chip-buy-button image=/assets/icons/chips/all/chip_svc_builder.png buy-link="https://portal.veinternational.org/buybuttons/us015498/btn/builder-chip-ser007/" desc="AIDEN will build anything you need."></chip-buy-button>
+                <chip-buy-button image=/assets/icons/chips/all/chip_svc_chef.png buy-link="https://portal.veinternational.org/buybuttons/us015498/btn/chef-chip-ser002/" desc="AIDEN will cook you a 5 star meal."></chip-buy-button>
+                <chip-buy-button image=/assets/icons/chips/all/chip_svc_clean.png buy-link="https://portal.veinternational.org/buybuttons/us015498/btn/clean-chip-ser001/" desc="AIDEN will clean up after you."></chip-buy-button>
+            </div>
+            <div style="display:flex;justify-content:space-evenly; position:relative; animation:animateright 1s">
+                <chip-buy-button image=/assets/icons/chips/all/chip_svc_drive.png buy-link="https://portal.veinternational.org/buybuttons/us015498/btn/drive-chip-ser003/" desc="AIDEN will drive your car wherever you need."></chip-buy-button>
+                <chip-buy-button image=/assets/icons/chips/all/chip_svc_guard.png buy-link="https://portal.veinternational.org/buybuttons/us015498/btn/guard-chip-ser009/" desc="AIDEN will be your personal body guard."></chip-buy-button>
+                <chip-buy-button image=/assets/icons/chips/all/chip_svc_lawn.png buy-link="https://portal.veinternational.org/buybuttons/us015498/btn/lawn-chip-ser008/" desc="AIDEN will landscape your property."></chip-buy-button>
+            </div>
+            <div class="boxfade" style="display:flex;justify-content:space-evenly; position:relative;">
+                <chip-buy-button image=/assets/icons/chips/all/chip_svc_news.png buy-link="https://portal.veinternational.org/buybuttons/us015498/btn/news-chip-ser006/" desc="AIDEN will gather and relay the most pertinent news."></chip-buy-button>
+                <chip-buy-button image=/assets/icons/chips/all/chip_svc_pet-care.png buy-link="https://portal.veinternational.org/buybuttons/us015498/btn/pet-care-chip-ser011/" desc="AIDEN will feed and groom any animal."></chip-buy-button>
+                <chip-buy-button image=/assets/icons/chips/all/chip_svc_repair.png buy-link="https://portal.veinternational.org/buybuttons/us015498/btn/repair-chip-ser010/" desc="AIDEN will fix any busted object."></chip-buy-button>
+            </div>
+            <div class="boxfade" style="display:flex;justify-content:space-evenly; position:relative;">
+                <chip-buy-button image=/assets/icons/chips/all/chip_svc_shop.png buy-link="https://portal.veinternational.org/buybuttons/us015498/btn/shop-chip-ser004/" desc="AIDEN will run your groceries."></chip-buy-button>
+                <chip-buy-button image=/assets/icons/chips/all/chip_svc_tidy.png buy-link="https://portal.veinternational.org/buybuttons/us015498/btn/tidy-chip-ser005/" desc="AIDEN will tidy up your room."></chip-buy-button>
+                <chip-buy-button image=/assets/icons/chips/default.png buy-link="" desc="Coming Soon."></chip-buy-button>
+            </div>
+        </div>
+
+        <div class="logo-primary" style="text-align:center; font-size:24px; padding:20px;background-image: url('../assets/images/circuits.png');">Amusement</div>
+        <div class="container-bg" style="display:flex; width:100%; background-color: #ffffff; flex-direction:column; padding:10px">
+            <div class="boxfade" style="display:flex;justify-content:space-evenly;">
+                <chip-buy-button image=/assets/icons/chips/all/chip_amsmt_dj.png buy-link="https://portal.veinternational.org/buybuttons/us015498/btn/dj-chip-ent002/" desc="AIDEN will take song requests at your next party."></chip-buy-button>
+                <chip-buy-button image=/assets/icons/chips/all/chip_amsmt_live_event.png buy-link="https://portal.veinternational.org/buybuttons/us015498/btn/live-event-chip-ent006/" desc="AIDEN will perform for you live."></chip-buy-button>
+                <chip-buy-button image=/assets/icons/chips/all/chip_amsmt_movie_tv.png buy-link="https://portal.veinternational.org/buybuttons/us015498/btn/movie-chip-ent005/" desc="AIDEN will display live television to the nearest TV."></chip-buy-button>
+            </div>
+            <div class="boxfade" style="display:flex;justify-content:space-evenly;">
+                <chip-buy-button image=/assets/icons/chips/all/chip_amsmt_musician.png buy-link="https://portal.veinternational.org/buybuttons/us015498/btn/musician-chip-ent004/" desc="AIDEN will play any instrument you give it."></chip-buy-button>
+                <chip-buy-button image=/assets/icons/chips/all/chip_amsmt_trainer.png buy-link="https://portal.veinternational.org/buybuttons/us015498/btn/trainer-chip-ent001/" desc="AIDEN will guide you through a fitness regimen."></chip-buy-button>
+                <chip-buy-button image=/assets/icons/chips/all/chip_amsmt_workout.png buy-link="https://portal.veinternational.org/buybuttons/us015498/btn/workout-chip-ent003/" desc="AIDEN will guide you through a simple workout."></chip-buy-button>
+            </div>
+        </div>
+
+        <div class="logo-primary" style="text-align:center; font-size:24px; padding:20px;background-image: url('../assets/images/circuits.png');">Learning</div>
+        <div class="container-bg" style="display:flex; width:100%; background-color: #ffffff; flex-direction:column; padding:10px">
+            <div class="boxfade" style="display:flex;justify-content:space-evenly;">
+                <chip-buy-button image=/assets/icons/chips/all/chip_lrn_math.png buy-link="https://portal.veinternational.org/buybuttons/us015498/btn/math-chip-le001/" desc="AIDEN will teach you math."></chip-buy-button>
+                <chip-buy-button image=/assets/icons/chips/all/chip_lrn_reading.png buy-link="https://portal.veinternational.org/buybuttons/us015498/btn/read-chip-le002/" desc="AIDEN will teach you how to read a new language."></chip-buy-button>
+                <chip-buy-button image=/assets/icons/chips/all/chip_lrn_speaking.png buy-link="https://portal.veinternational.org/buybuttons/us015498/btn/language-chip-le004/" desc="AIDEN will teach you how to speak a new language."></chip-buy-button>
+            </div>
+        </div>
+        <div class="logo-primary" style="text-align:center; font-size:24px; padding:20px;background-image: url('../assets/images/circuits.png');">Life Style</div>
+        <div class="container-bg" style="display:flex; width:100%; background-color: #ffffff; flex-direction:column; padding:10px">
+            <div class="boxfade" style="display:flex;justify-content:space-evenly;">
+                <chip-buy-button image=/assets/icons/chips/all/chip_ls_chill.png buy-link="https://portal.veinternational.org/buybuttons/us015498/btn/chill-chip-ls003/" desc="AIDEN will relax and soothe your vibe."></chip-buy-button>
+                <chip-buy-button image=/assets/icons/chips/all/chip_ls_skincare.png buy-link="https://portal.veinternational.org/buybuttons/us015498/btn/skincare-chip-ls002/" desc="AIDEN will alalyze and predict the perfect skincare routine."></chip-buy-button>
+                <chip-buy-button image=/assets/icons/chips/all/chip_ls_style.png buy-link="https://portal.veinternational.org/buybuttons/us015498/btn/style-chip-ls001/" desc="AIDEN will pick the trendiest outfit."></chip-buy-button>
+            </div>
+        </div>
+    </div>
+    <img src="~/assets/icons/aiden.png" alt="Following Image" id="following-image" style="z-index:1; position:absolute;" state="hover">
+    <script src="~/js/aiden.js"></script>
+</main>

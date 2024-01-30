@@ -1,0 +1,194 @@
+﻿@font-face {
+    /*https://www.fontsquirrel.com/tools/webfont-generator for fonts! */
+    font-family: 'nasalizationregular';
+    src: url('nasalization-rg-webfont.woff2') format('woff2'), url('nasalization-rg-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        offset-position: 0px;
+    }
+
+    100% {
+        opacity: 1;
+        offset-position: 100px;
+    }
+}
+
+@keyframes animateright {
+    from {
+        right: -800px;
+        opacity: 0
+    }
+
+    to {
+        right: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -200px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+.logo-primary {
+    font-family: 'Nasalization', sans-serif;
+    color: #101010;
+}
+
+.logo-primary-selected {
+    font-weight: 900;
+    font-family: 'Nasalization', sans-serif;
+    color: #000000;
+}
+
+.logo-secondary {
+    font-family: 'Nasalization', sans-serif;
+    color: #ffbd59;
+}
+
+.logo-secondary-selected {
+    font-weight: 900;
+    font-family: 'Nasalization', sans-serif;
+    color: #ffbd59;
+}
+
+.box3 {
+    width: 300px;
+    margin: 50px auto;
+    border-radius: 15px;
+    background: #a1a1a1;
+    color: #000000;
+    padding: 5px;
+    text-align: left;
+    font-weight: 800;
+    font-family: 'Nasalization', sans-serif;
+}
+
+.speechRight {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+}
+
+#following-image {
+    position: absolute;
+    width: 50px;
+    height: auto;
+}
+
+.chat-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.chat-box {
+    width: 300px;
+    height: 100px;
+    border: 1px solid #ccc;
+    overflow-y: scroll;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.user-chat-box {
+    width: 300px;
+    height: 50px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-family: 'Nasalization', sans-serif;
+}
+
+.message {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-family: 'Nasalization', sans-serif;
+}
+
+.user-message {
+    text-align: right;
+}
+
+.robot-mark-btn {
+    width: 300px;
+    height: 450px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #E7E7E7;
+    border-radius: 10px;
+    display: block;
+    margin:auto;
+}
+
+.btn-container {
+    text-align: center;
+}
+
+.align-center {
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.container-bg {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #E7E7E7;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+}
+
+.vidContain {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+}
+
+.vid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    color: white;
+}
+
+
+
